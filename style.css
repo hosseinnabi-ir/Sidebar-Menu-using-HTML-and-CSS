@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar {
+    width: 320px;
+    height: 100%;
+    background: #040b14;
+    transition: .6s;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile img {
+    width: 150px;
+    border-radius: 50%;
+    border: 10px solid #252324;
+    margin-top: 50px;
+}
+
+.sidebar .profile h1 {
+    color: #f1f1f1;
+    font-size: 28px;
+    margin-top: 16px;
+}
+
+.sidebar .profile .social-media {
+    margin-top: 8px;
+}
+
+.sidebar .profile .social-media i {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #f1f1f1;
+    background: #252423;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: .4s;
+}
+
+.sidebar .profile .social-media i:hover {
+    background: #e9324e;
+}
+
+.sidebar nav {
+    margin-top: 50px;
+}
+
+.sidebar nav .nav-item {
+    cursor: pointer;
+    color: #a8a9b4;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 20px 30px;
+    transition: .4s;
+}
+
+.sidebar nav .nav-item i {
+    font-size: 26px;
+    margin-right: 4px;
+    transform: translateY(4px);
+    transition: .2s;
+}
+
+.sidebar nav .nav-item:hover {
+    color: #f1f1f1;
+}
+
+.sidebar nav .nav-item:hover i {
+    color: #e9324e;
+}
+
+.sidebar nav .active {
+    color: #f1f1f1;
+}
+
+.sidebar nav .active i {
+    color: #e9324e;
+}
+
+@media (max-width: 648px) {
+    
+    .sidebar {
+        margin-left: -320px;
+    }
+
+    .toggle {
+        display: block !important;
+    }
+
+}
+
+input {
+    display: none;
+}
+
+.toggle .fa-close {
+    display: none;
+}
+
+.toggle {
+    cursor: pointer;
+    position: absolute;
+    color: #e9324e;
+    font-size: 2rem;
+    left: 10px;
+    top: 6px;
+    transition: .6s;
+    display: none;
+}
+
+input:checked ~ .sidebar {
+    margin-left: 0;
+}
+
+input:checked ~ .toggle {
+    left: unset;
+    right: 10px;
+}
+
+input:checked ~ .toggle .fa-bars {
+    display: none;
+}
+
+input:checked ~ .toggle .fa-close {
+    display: block;
+}
